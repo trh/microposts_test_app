@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %strong User:
+  = @micropost.user
+%p
+  %strong Name:
+  = @micropost.name
+%p
+  %strong Description:
+  = @micropost.description
+= link_to 'Edit', edit_micropost_path(@micropost)
+|
+= link_to 'Back', microposts_path

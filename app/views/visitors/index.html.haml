@@ -1,0 +1,12 @@
+%h1 Microposts Collection
+
+%ul
+  - @microposts.each do |micropost|
+    %li{style: "width: 25%;float:left;"}
+      %h3=micropost.name
+      %span=micropost.description
+      %br
+      %span
+        = link_to "Approve", approve_micropost_path(micropost.id), method: :post
+
+
